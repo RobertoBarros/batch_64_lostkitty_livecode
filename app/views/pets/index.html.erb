@@ -1,0 +1,10 @@
+<%= link_to 'Relatar novo animal encontrado', new_pet_path, class: 'btn btn-primary btn-lg' %>
+
+<br>
+<br>
+
+<% @pets.each do |pet| %>
+  <%= render partial: 'pet', locals: {pet: pet} %>
+  <%= link_to 'Ver Detalhe', pet_path(pet), class: 'btn btn-default' %>
+  <hr>
+<%end%>
